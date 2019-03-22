@@ -1,0 +1,27 @@
+{
+  "name": "node-neo4j",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www --exec babel-node --presets babel-preset-env",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "neode": "^0.2.14",
+    "supervillains": "^2.2.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.10"
+  }
+}
