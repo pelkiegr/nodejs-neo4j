@@ -18,7 +18,7 @@ router.post('/hub_access', (req, res, next) => {
     findAccountById(req.body.accountId)
   ])
     .then(([user, account]) => {
-      user.relateTo(account, 'has_hub_access')
+      user.relateTo(account, 'has_access')
         .then(node => node.toJson())
         .then(json => res.send(json))
     })
