@@ -1,0 +1,22 @@
+version: '2'
+
+networks:
+  neo:
+
+services:
+  neo4j:
+      image: graphfoundation/ongdb:3.5.3
+      ports:
+        - "7474:7474"
+        - "7473:7473"
+        - "7687:7687"
+      networks:
+        - neo
+      volumes:
+        - ${NEO4J_PLUGIN_PATH}:/plugins
+        - ${NEO4J_DATA_PATH}:/data
+        - ${NEO4J_CONF_PATH}:/conf
+      environment:
+        - NEO4J_AUTH=neo4j/test123
+      mem_limit: 2048m
+      memswap_limit: 2048m
